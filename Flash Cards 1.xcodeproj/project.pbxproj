@@ -13,6 +13,9 @@
 		01EEB65A2397433E0040F3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EEB6592397433E0040F3DE /* Assets.xcassets */; };
 		01EEB65D2397433E0040F3DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EEB65C2397433E0040F3DE /* Preview Assets.xcassets */; };
 		01EEB6602397433E0040F3DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EEB65E2397433E0040F3DE /* LaunchScreen.storyboard */; };
+		01EEB668239DF6020040F3DE /* CardsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEB667239DF6010040F3DE /* CardsetView.swift */; };
+		01EEB66A239E07DD0040F3DE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEB669239E07DD0040F3DE /* CardView.swift */; };
+		01EEB66C239E10DF0040F3DE /* AddCardModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEB66B239E10DF0040F3DE /* AddCardModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		01EEB65C2397433E0040F3DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		01EEB65F2397433E0040F3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01EEB6612397433E0040F3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01EEB667239DF6010040F3DE /* CardsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsetView.swift; sourceTree = "<group>"; };
+		01EEB669239E07DD0040F3DE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		01EEB66B239E10DF0040F3DE /* AddCardModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				01EEB65E2397433E0040F3DE /* LaunchScreen.storyboard */,
 				01EEB6612397433E0040F3DE /* Info.plist */,
 				01EEB65B2397433E0040F3DE /* Preview Content */,
+				01EEB667239DF6010040F3DE /* CardsetView.swift */,
+				01EEB669239E07DD0040F3DE /* CardView.swift */,
+				01EEB66B239E10DF0040F3DE /* AddCardModalView.swift */,
 			);
 			path = "Flash Cards 1";
 			sourceTree = "<group>";
@@ -147,8 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01EEB6542397433B0040F3DE /* AppDelegate.swift in Sources */,
+				01EEB668239DF6020040F3DE /* CardsetView.swift in Sources */,
+				01EEB66C239E10DF0040F3DE /* AddCardModalView.swift in Sources */,
 				01EEB6562397433B0040F3DE /* SceneDelegate.swift in Sources */,
 				01EEB6582397433B0040F3DE /* ContentView.swift in Sources */,
+				01EEB66A239E07DD0040F3DE /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
