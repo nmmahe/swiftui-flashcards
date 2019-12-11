@@ -1,34 +1,27 @@
 //
-//  AddCardModalView.swift
+//  AddTopicModalView.swift
 //  Flash Cards 1
 //
-//  Created by Nick Mahe on 12/8/19.
+//  Created by Nick Mahe on 12/9/19.
 //  Copyright © 2019 Nick Mahe. All rights reserved.
 //
 
 import SwiftUI
 
-struct AddCardModalView: View {
+struct AddTopicModalView: View {
     // 1.
     @Binding var showModal: Bool
-    @State var question: String
-    @State var answer: String
-    @Binding var box: Box
+    @Binding var boxes: [Box]
+    @State var topic: String
    
     var body: some View {
         NavigationView{
             VStack {
                 Spacer()
                 
-                TextField("Type your question here:", text: $question)
-                    .fixedSize()
-                    
+                TextField("What's the new topic?", text: self.$topic)
                 
-                Spacer()
-                TextField("Type your answer here:", text: $answer)
-                    .fixedSize()
-                Spacer()
-                Button(action:{self.box.cards.append(Card(id: UUID(), question: self.question, answer: self.answer))
+                Button(action:{self.boxes.append(Box(id: UUID(), title: self.topic, cards: []))
                     
                     self.showModal.toggle()
                 }){
@@ -48,13 +41,13 @@ struct AddCardModalView: View {
                 
                 Spacer()
             }
-            .navigationBarTitle("New Flashcard")
+            .navigationBarTitle("New Topic")
         }
     }
 }
 
-/*struct AddCardModalView_Previews: PreviewProvider {
+/*struct AddTopicModalView_Previews: PreviewProvider {
     static var previews: some View {
-        AddCardModalView(showModal: .constant(true), boxes: self.$boxes)
+        AddTopicModalView(showModal: .constant(false), boxes: .constant(<#T##value: [Box]##[Box]#>), topic: "")
     }
 }*/

@@ -10,7 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var num = 1
-    var boxes: [Box] = [
+    @State private var showModal = false
+    @State var boxes: [Box] = [
         Box(id: UUID(), title: "Music", cards: [Card(id: UUID(), question: "What is my age?", answer: "24"), Card(id: UUID(), question: "Where am I from?", answer: "San Francisco, California")]),
         Box(id:UUID(), title: "History", cards: []),
         Box(id:UUID(), title: "Math", cards: []),
@@ -20,34 +21,42 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-                ScrollView{
+            VStack{
+                ScrollView(.horizontal){
                     HStack{
-                        ForEach(boxes, id: \.self.id) { box in
-                            NavigationLink(destination: CardsetView(box: box)
-                                )
-                            {
-                                BoxView(box:box)
-                                
+                        //(boxes, \.self.id
+                            ForEach(boxes) { box in
+                                NavigationLink(destination:
+                                    CardsetView(boxes: self.$boxes, box: box))
+                                {
+                                    BoxView(box: box)
                             }
                         }
                     }
-                    .padding(.top, 80)
-                    Text(String(num))
+                    
+                    //Text(String(num))
                     //todo: take this out
                 }
+                .padding(.top, 50)
+                Spacer()
+                //Any additional contact in here for front page
+                
+            }
             .navigationBarTitle(Text("Flashcard Topics"))
             .navigationBarItems(
-                trailing: Button(action: {}, label: { Text("Add") })
+                trailing: Button(action: {self.showModal.toggle()}, label: {            Text("Add") })
+                     .sheet(isPresented: self.$showModal){
+                        AddTopicModalView(showModal: self.$showModal, boxes: self.$boxes, topic: "")
+                }
             )
         }
-        
-        //todo: make this work
+    .background(Color(.black))
+    //todo: make this work
     }
-    func addPokemon() {
-    }
+
 }
 
-struct BoxView: View{
+    struct BoxView: View{
     let box: Box
     
     private func getColor() -> Color{
@@ -62,7 +71,7 @@ struct BoxView: View{
         VStack{
             Rectangle()
                 .fill(getColor())
-                .frame(width:100, height:100)
+                .frame(width:120, height:120)
             .cornerRadius(12)
             
             Text(self.box.title)
@@ -73,11 +82,18 @@ struct BoxView: View{
     }
 }
 
-struct Box: Hashable{
+struct Box: Identifiable, Hashable{
+
     var id = UUID()
     var title: String
     var cards: [Card]
+    /*init(id:UUID, title:String, cards:[Card]){
+        self.id = UUID()
+        self.title = title
+        self.cards = cards
+    }*/
 }
+
 
 struct Card: Identifiable, Hashable{
     var id = UUID()

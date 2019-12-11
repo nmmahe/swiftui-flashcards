@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014BF3F0239F76EC00B80CD6 /* AddTopicModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014BF3EF239F76EC00B80CD6 /* AddTopicModalView.swift */; };
 		01EEB6542397433B0040F3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEB6532397433B0040F3DE /* AppDelegate.swift */; };
 		01EEB6562397433B0040F3DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEB6552397433B0040F3DE /* SceneDelegate.swift */; };
 		01EEB6582397433B0040F3DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEB6572397433B0040F3DE /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		014BF3EF239F76EC00B80CD6 /* AddTopicModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTopicModalView.swift; sourceTree = "<group>"; };
 		01EEB6502397433B0040F3DE /* Flash Cards 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Cards 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EEB6532397433B0040F3DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01EEB6552397433B0040F3DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				01EEB667239DF6010040F3DE /* CardsetView.swift */,
 				01EEB669239E07DD0040F3DE /* CardView.swift */,
 				01EEB66B239E10DF0040F3DE /* AddCardModalView.swift */,
+				014BF3EF239F76EC00B80CD6 /* AddTopicModalView.swift */,
 			);
 			path = "Flash Cards 1";
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				01EEB6542397433B0040F3DE /* AppDelegate.swift in Sources */,
 				01EEB668239DF6020040F3DE /* CardsetView.swift in Sources */,
 				01EEB66C239E10DF0040F3DE /* AddCardModalView.swift in Sources */,
+				014BF3F0239F76EC00B80CD6 /* AddTopicModalView.swift in Sources */,
 				01EEB6562397433B0040F3DE /* SceneDelegate.swift in Sources */,
 				01EEB6582397433B0040F3DE /* ContentView.swift in Sources */,
 				01EEB66A239E07DD0040F3DE /* CardView.swift in Sources */,
