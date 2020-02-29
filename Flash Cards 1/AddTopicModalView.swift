@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AddTopicModalView: View {
-    // 1.
+    
     @Binding var showModal: Bool
     @Binding var boxes: [Box]
     @State var topic: String
@@ -18,9 +18,10 @@ struct AddTopicModalView: View {
         NavigationView{
             VStack {
                 Spacer()
-                
                 TextField("What's the new topic?", text: self.$topic)
-                
+                    .fixedSize()
+                    .font(.headline)
+                Spacer()
                 Button(action:{self.boxes.append(Box(id: UUID(), title: self.topic, cards: []))
                     
                     self.showModal.toggle()
@@ -32,17 +33,17 @@ struct AddTopicModalView: View {
                 }
                 Button(action: {
                     self.showModal.toggle()
-                }) {
+                })
+                {
                     Text("Cancel")
                         .font(.headline)
                         .fontWeight(.heavy)
                     }
-                
-                
                 Spacer()
             }
             .navigationBarTitle("New Topic")
         }
+        .environment(\.colorScheme, .dark)
     }
 }
 

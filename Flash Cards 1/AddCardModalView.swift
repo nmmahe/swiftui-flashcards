@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct AddCardModalView: View {
-    // 1.
     @Binding var showModal: Bool
     @State var question: String
     @State var answer: String
@@ -20,13 +19,13 @@ struct AddCardModalView: View {
             VStack {
                 Spacer()
                 
-                TextField("Type your question here:", text: $question)
+                TextField("Type your question here:" , text: $question)
                     .fixedSize()
-                    
-                
+                    .font(.headline)
                 Spacer()
                 TextField("Type your answer here:", text: $answer)
                     .fixedSize()
+                    .font(.headline)
                 Spacer()
                 Button(action:{self.box.cards.append(Card(id: UUID(), question: self.question, answer: self.answer))
                     
@@ -44,12 +43,11 @@ struct AddCardModalView: View {
                         .font(.headline)
                         .fontWeight(.heavy)
                     }
-                
-                
                 Spacer()
             }
             .navigationBarTitle("New Flashcard")
         }
+        .environment(\.colorScheme, .dark)
     }
 }
 
